@@ -1,0 +1,44 @@
+ class Node {
+   int data;
+    Node next;
+    Node(int d)  { data = d;  next = null; }
+}
+ Linked List class
+class LinkedList
+{
+    Node head;  // head of list
+}
+This is method only submission.  You only need to complete the method. */
+class GFG
+{
+    // Function to find middle element a linked list
+    int getMiddle(Node head)
+   {
+         // Your code here.
+         int count = 0;
+         int num=0;
+         Node current = head;
+         Node cNode = head;
+         while(current.next != null){
+             current = current.next;
+             count++;
+         }
+            //even number
+             while(cNode.next!=null && num<count/2){
+                 cNode = cNode.next;
+                 num++;
+             }
+             if(count%2==0){
+                 int result = cNode.data;
+                
+                 return result;
+             }else{
+                  int result = cNode.next.data;
+               //  int result = cNode.data;
+                 return result;
+             }
+             
+             
+         
+   }
+}
